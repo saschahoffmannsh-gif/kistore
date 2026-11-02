@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>KISTORE – Die besten KI-Webapps, kuratiert</title>
+  <meta name="description" content="KISTORE ist ein kuratiertes Verzeichnis für KI-Webapps: entdecken, vergleichen, bewerten und direkt beim Anbieter öffnen.">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light dark">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="KISTORE">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="app.css?v=1793652872">
+  <style>#boot{position:fixed;inset:0;display:grid;place-items:center;background:var(--bg)}#boot div{width:84px;height:84px;border-radius:20px;background:linear-gradient(135deg,#5B5BF7,#B04CF0 60%,#FF5E8A);animation:pulse 1.2s ease-in-out infinite}@keyframes pulse{50%{transform:scale(.92);opacity:.7}}</style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="half"><stop offset="50%" stop-color="currentColor"/><stop offset="50%" stop-color="transparent"/></linearGradient></defs></svg>
+  <div id="boot" aria-hidden="true"><div></div></div>
+  <main id="view" aria-live="polite"></main>
+  <nav id="tabbar" class="tabbar" aria-label="Hauptnavigation"></nav>
+  <noscript><p style="padding:40px;text-align:center">KISTORE benötigt JavaScript.</p></noscript>
+  <script src="config.js?v=1793652872"></script>
+  <script src="vendor/supabase.js"></script>
+  <script src="payments.js?v=1793652872"></script>
+  <script src="demo.js?v=1793652872"></script>
+  <script src="art.js?v=1793652872"></script>
+  <script src="app.js?v=1793652872"></script>
+</body>
+</html>

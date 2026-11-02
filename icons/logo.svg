@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6E5BFF"/><stop offset=".5" stop-color="#4B23E0"/><stop offset="1" stop-color="#22106E"/>
+    </linearGradient>
+    <radialGradient id="glowP" cx=".9" cy=".95" r=".7"><stop offset="0" stop-color="#FF4FA0" stop-opacity=".95"/><stop offset="1" stop-color="#FF4FA0" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowC" cx=".08" cy=".05" r=".6"><stop offset="0" stop-color="#7FE3FF" stop-opacity=".85"/><stop offset="1" stop-color="#7FE3FF" stop-opacity="0"/></radialGradient>
+    <linearGradient id="bag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E4DEFF"/></linearGradient>
+    <linearGradient id="spark" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5B8CFF"/><stop offset=".55" stop-color="#8A3BFF"/><stop offset="1" stop-color="#FF3D8B"/></linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="170%"><feGaussianBlur stdDeviation="28"/></filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <rect width="1024" height="1024" fill="url(#glowP)"/>
+  <rect width="1024" height="1024" fill="url(#glowC)"/>
+  <ellipse cx="512" cy="840" rx="300" ry="54" fill="#0B0430" opacity=".55" filter="url(#sh)"/>
+  
+  <path d="M304 388H720q34 0 37 34l26 352q3 46-43 46H284q-46 0-43-46l26-352q3-34 37-34z" fill="url(#bag)"/>
+  <path d="M304 388H720q34 0 37 34l6 80Q512 560 261 502l6-80q3-34 37-34z" fill="url(#gloss)" opacity=".7"/>
+  <circle cx="392" cy="446" r="22" fill="#B9ABFF"/><circle cx="632" cy="446" r="22" fill="#B9ABFF"/><path d="M392 446C392 232 632 232 632 446" fill="none" stroke="#fff" stroke-width="38" stroke-linecap="round"/><path d="M392 446C392 232 632 232 632 446" fill="none" stroke="#D9D2FF" stroke-width="10" stroke-linecap="round" transform="translate(0 8)" opacity=".0"/>
+  <path d="M512 520c14 74 40 100 114 114-74 14-100 40-114 114-14-74-40-100-114-114 74-14 100-40 114-114z" fill="url(#spark)" opacity=".35" filter="url(#soft)" transform="translate(0 10)"/>
+  <path d="M512 520c14 74 40 100 114 114-74 14-100 40-114 114-14-74-40-100-114-114 74-14 100-40 114-114z" fill="url(#spark)"/>
+  <path d="M640 690c5 26 14 35 40 40-26 5-35 14-40 40-5-26-14-35-40-40 26-5 35-14 40-40z" fill="url(#spark)"/>
+  <path d="M398 556c3 16 9 22 25 25-16 3-22 9-25 25-3-16-9-22-25-25 16-3 22-9 25-25z" fill="#8A7BFF"/>
+</svg>

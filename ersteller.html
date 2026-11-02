@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Für Ersteller: Listing-Abo – KISTORE</title><meta name="description" content="Liste deine KI-Webapp bei KISTORE: verifiziert, mit Statistik, Neuigkeiten, Deals und Antworten auf Bewertungen.">
+<meta name="theme-color" content="#ffffff"><link rel="icon" type="image/png" href="icons/favicon-32.png"><link rel="stylesheet" href="legal.css?v=1793652872">
+<style>
+.hero{text-align:center;padding:10px 0 4px}.hero img{width:84px;height:84px;border-radius:20px;box-shadow:0 14px 36px -12px rgba(75,35,224,.6)}
+.price{margin:18px 0;border-radius:22px;padding:18px;text-align:center;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(135deg,#5B4BFF,#9B3BFF,#FF3D8B) border-box;border:2px solid transparent}
+.price b{font-size:42px;letter-spacing:-.04em;background:linear-gradient(90deg,#5B4BFF,#9B3BFF,#FF3D8B);-webkit-background-clip:text;background-clip:text;color:transparent}
+.note{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#B86A00;background:#FFF1DC;padding:3px 8px;border-radius:999px}
+.grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:12px 0}
+.card{background:#fff;border-radius:16px;padding:14px 16px;border:1px solid var(--line)}.card b{display:block}
+.buy{display:flex;align-items:center;justify-content:center;height:50px;border-radius:14px;background:linear-gradient(135deg,#5B4BFF,#9B3BFF 60%,#FF3D8B);color:#fff;font-weight:650;text-decoration:none;margin:10px 0}
+.buy.off{background:#E5E5EA;color:#8E8E93;pointer-events:none}
+.ad{display:inline-block;font-size:11px;font-weight:700;background:#007AFF;color:#fff;border-radius:5px;padding:1px 6px;margin-left:6px;vertical-align:2px}
+</style></head>
+<body><header class="lh"><a href="./" class="home"><img src="icons/icon-192.png" alt="" width="32" height="32"><span>KISTORE</span></a><a href="./#/listing" class="back">← zur App</a></header>
+<main class="lm">
+<div class="hero"><img src="icons/logo.svg" alt=""><h1>Dein Listing bei KISTORE</h1><p>Ein Abo je App, alles drin. Für Nutzer bleibt KISTORE kostenlos.</p></div>
+<div class="price"><b id="p">19 €</b> <span>/ Monat je App</span><br><span id="pc">monatlich kündbar · zzgl. USt.</span><br><span class="note" id="pn">Preisvorschlag (Demo)</span><a class="buy" id="buy-listing" href="#">Listing-Abo buchen</a></div>
+<h2>Enthalten</h2>
+<div class="grid">
+<div class="card"><b>Verifiziert-Abzeichen</b>Siegel an App und Ersteller-Profil.</div>
+<div class="card"><b>Schnellere Prüfung</b>Einreichungen und Änderungen bevorzugt.</div>
+<div class="card"><b>Statistik je App</b>Aufrufe, Öffnungen, Favoriten, Follower.</div>
+<div class="card"><b>Antworten auf Bewertungen</b>Direkt unter der Bewertung sichtbar.</div>
+<div class="card"><b>Updates &amp; News</b>Erreichen alle, die deiner App folgen.</div>
+<div class="card"><b>Exklusive Deals</b>Rabattcodes für die KISTORE-Community.</div>
+</div>
+<h2>Optionale Featured-Plätze</h2>
+<div class="grid" id="feat"></div>
+<h2>So läuft es ab</h2>
+<ol><li>App in der KISTORE-App unter Konto › „App einreichen“ vorschlagen.</li><li>Wir prüfen Funktion, Datenschutzangaben und Inhalte.</li><li>Nach der Freigabe buchst du das Listing-Abo – hier auf der Website (Zahlungsdienst, z. B. Stripe) oder in der iOS-App per In-App-Kauf über Apple.</li><li>Deine App geht live; Ersteller-Bereich mit Statistik, Neuigkeiten und Deals wird freigeschaltet.</li></ol>
+<p>Kündigung: monatlich – auf der Website zum Ende des bezahlten Monats, bei Kauf über Apple in den Einstellungen deiner Apple-ID. Ohne aktives Abo wird die App pausiert. Details: <a href="nutzungsbedingungen.html#ersteller">Nutzungsbedingungen, Abschnitt 8</a>.</p>
+</main>
+<footer class="lf"><nav><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="nutzungsbedingungen.html">Nutzungsbedingungen</a></nav><p>KISTORE – die besten KI-Webapps, kuratiert</p></footer>
+<script src="config.js?v=1793652872"></script>
+<script>
+(function () {
+  var C = window.AW_CONFIG || {}, L = C.listing || {}, ch = C.checkout || {};
+  var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  document.getElementById("p").textContent = L.price || "";
+  document.getElementById("pc").textContent = (L.cancel || "monatlich kündbar") + " · zzgl. USt.";
+  document.getElementById("pn").textContent = L.note || "";
+  var buy = function (el, key) { if (ch[key]) { el.href = ch[key]; el.target = "_blank"; el.rel = "noopener"; } else { el.textContent = "Bezahlung bald verfügbar"; el.classList.add("off"); el.removeAttribute("href"); } };
+  buy(document.getElementById("buy-listing"), "listing");
+  document.getElementById("feat").innerHTML = (C.featured || []).map(function (f) { return '<div class="card"><b>' + esc(f.title) + '<span class="ad">Gesponsert</span></b>' + esc(f.desc) + '<br><b style="margin-top:6px">' + esc(f.price) + ' / 7 Tage</b><a class="buy" data-k="' + esc(f.product) + '" href="#">Buchen</a></div>'; }).join("");
+  [].forEach.call(document.querySelectorAll("#feat .buy"), function (a) { buy(a, a.getAttribute("data-k")); });
+})();
+</script>
+</body></html>
